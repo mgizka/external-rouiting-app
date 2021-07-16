@@ -95,7 +95,7 @@ fi
 
 if [ -z "$REPO" ]
 then
-  REPO="$BASEDIR"/repo
+  REPO="$BASEDIR"/repomaven-repository
 fi
 
 CLASSPATH="$BASEDIR"/etc:"$REPO"/org/eclipse/ecf/org.json/1.0.0.v201011060100/org.json-1.0.0.v201011060100.jar:"$REPO"/org/eclipse/ecf/org.json/1.0.0.v201011060100/org.json-1.0.0.v201011060100.jar:"$REPO"/org/eclipse/jetty/jetty-util-ajax/9.4.19.v20190610/jetty-util-ajax-9.4.19.v20190610.jar:"$REPO"/org/eclipse/jetty/jetty-util/9.4.19.v20190610/jetty-util-9.4.19.v20190610.jar:"$REPO"/org/slf4j/slf4j-api/1.7.18/slf4j-api-1.7.18.jar:"$REPO"/org/cometd/java/cometd-java-client/4.0.4/cometd-java-client-4.0.4.jar:"$REPO"/org/cometd/java/bayeux-api/4.0.4/bayeux-api-4.0.4.jar:"$REPO"/org/cometd/java/cometd-java-common/4.0.4/cometd-java-common-4.0.4.jar:"$REPO"/org/eclipse/jetty/jetty-io/9.4.18.v20190429/jetty-io-9.4.18.v20190429.jar:"$REPO"/org/eclipse/jetty/jetty-http/9.4.18.v20190429/jetty-http-9.4.18.v20190429.jar:"$REPO"/org/eclipse/jetty/jetty-client/9.4.18.v20190429/jetty-client-9.4.18.v20190429.jar:"$REPO"/com/orange/dop/external-routing-app/0.1.0-SNAPSHOT/external-routing-app-0.1.0-SNAPSHOT.jar:target/classes/
