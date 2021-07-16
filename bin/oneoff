@@ -37,7 +37,7 @@ PRGDIR=`dirname "$PRG"`
 BASEDIR=`cd "$PRGDIR/.." >/dev/null; pwd`
 
 # Reset the REPO variable. If you need to influence this use the environment setup file.
-REPO=/Users/mgizka/.m2/repository/
+REPO=
 
 
 # OS specific support.  $var _must_ be set to either true or false.
