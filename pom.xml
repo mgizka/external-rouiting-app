@@ -56,6 +56,11 @@
             <version>1.1.6</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+          <groupId>org.eclipse.jetty</groupId>
+          <artifactId>jetty-client</artifactId>
+          <version>9.3.0.RC1</version>
+        </dependency>
     </dependencies>
 
   <build>
@@ -117,12 +122,6 @@
             <programs>
                 <program>
                     <mainClass>com.orange.dop.poc.servicechannel.externalrouting.ExternalRoutingApp</mainClass>
-<commandLineArguments>
-			 <commandLineArgument>marcin.gizka@accenture.com.b2bdev4</commandLineArgument>
- 		         <commandLineArgument>Maja2020!</commandLineArgument>
- 			 <commandLineArgument>/topic/PSRPushTopic</commandLineArgument>
- 		         <commandLineArgument>/topic/USPPushTopic</commandLineArgument>
-		    </commandLineArguments>
                     <name>oneoff</name>
                 </program>
             </programs>

@@ -19,6 +19,7 @@
 #   reserved.
 
 
+
 # resolve links - $0 may be a softlink
 PRG="$0"
 
@@ -36,7 +37,7 @@ PRGDIR=`dirname "$PRG"`
 BASEDIR=`cd "$PRGDIR/.." >/dev/null; pwd`
 
 # Reset the REPO variable. If you need to influence this use the environment setup file.
-REPO=
+REPO=/Users/mgizka/.m2/repository/
 
 
 # OS specific support.  $var _must_ be set to either true or false.
@@ -97,7 +98,7 @@ then
   REPO="$BASEDIR"/repo
 fi
 
-CLASSPATH="$BASEDIR"/etc:"$REPO"/org/eclipse/ecf/org.json/1.0.0.v201011060100/org.json-1.0.0.v201011060100.jar:"$REPO"/org/eclipse/jetty/jetty-util-ajax/9.4.19.v20190610/jetty-util-ajax-9.4.19.v20190610.jar:"$REPO"/org/eclipse/jetty/jetty-util/9.4.19.v20190610/jetty-util-9.4.19.v20190610.jar:"$REPO"/org/slf4j/slf4j-api/1.7.18/slf4j-api-1.7.18.jar:"$REPO"/org/cometd/java/cometd-java-client/4.0.4/cometd-java-client-4.0.4.jar:"$REPO"/org/cometd/java/bayeux-api/4.0.4/bayeux-api-4.0.4.jar:"$REPO"/org/cometd/java/cometd-java-common/4.0.4/cometd-java-common-4.0.4.jar:"$REPO"/org/eclipse/jetty/jetty-io/9.4.18.v20190429/jetty-io-9.4.18.v20190429.jar:"$REPO"/org/eclipse/jetty/jetty-http/9.4.18.v20190429/jetty-http-9.4.18.v20190429.jar:"$REPO"/org/eclipse/jetty/jetty-client/9.4.18.v20190429/jetty-client-9.4.18.v20190429.jar:"$REPO"/com/orange/dop/external-routing-app/0.1.0-SNAPSHOT/external-routing-app-0.1.0-SNAPSHOT.jar
+CLASSPATH="$BASEDIR"/etc:"$REPO"/org/eclipse/ecf/org.json/1.0.0.v201011060100/org.json-1.0.0.v201011060100.jar:"$REPO"/org/eclipse/ecf/org.json/1.0.0.v201011060100/org.json-1.0.0.v201011060100.jar:"$REPO"/org/eclipse/jetty/jetty-util-ajax/9.4.19.v20190610/jetty-util-ajax-9.4.19.v20190610.jar:"$REPO"/org/eclipse/jetty/jetty-util/9.4.19.v20190610/jetty-util-9.4.19.v20190610.jar:"$REPO"/org/slf4j/slf4j-api/1.7.18/slf4j-api-1.7.18.jar:"$REPO"/org/cometd/java/cometd-java-client/4.0.4/cometd-java-client-4.0.4.jar:"$REPO"/org/cometd/java/bayeux-api/4.0.4/bayeux-api-4.0.4.jar:"$REPO"/org/cometd/java/cometd-java-common/4.0.4/cometd-java-common-4.0.4.jar:"$REPO"/org/eclipse/jetty/jetty-io/9.4.18.v20190429/jetty-io-9.4.18.v20190429.jar:"$REPO"/org/eclipse/jetty/jetty-http/9.4.18.v20190429/jetty-http-9.4.18.v20190429.jar:"$REPO"/org/eclipse/jetty/jetty-client/9.4.18.v20190429/jetty-client-9.4.18.v20190429.jar:"$REPO"/com/orange/dop/external-routing-app/0.1.0-SNAPSHOT/external-routing-app-0.1.0-SNAPSHOT.jar:/Users/mgizka/projects/external-routing-app/target/classes
 
 ENDORSED_DIR=
 if [ -n "$ENDORSED_DIR" ] ; then
@@ -117,6 +118,8 @@ if $cygwin; then
   [ -n "$REPO" ] && REPO=`cygpath --path --windows "$REPO"`
 fi
 
+echo "$REPO"
+
 exec "$JAVACMD" $JAVA_OPTS  \
   -classpath "$CLASSPATH" \
   -Dapp.name="oneoff" \
@@ -124,5 +127,4 @@ exec "$JAVACMD" $JAVA_OPTS  \
   -Dapp.repo="$REPO" \
   -Dapp.home="$BASEDIR" \
   -Dbasedir="$BASEDIR" \
-  com.orange.dop.poc.servicechannel.externalrouting.ExternalRoutingApp \
-  marcin.gizka@accenture.com.b2bdev4 Maja2020! /topic/PSRPushTopic /topic/USPPushTopic "$@"
+  com.orange.dop.poc.servicechannel.externalrouting.ExternalRoutingApp

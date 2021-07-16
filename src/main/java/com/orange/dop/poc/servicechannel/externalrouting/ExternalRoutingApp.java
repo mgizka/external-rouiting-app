@@ -58,6 +58,9 @@ public class ExternalRoutingApp {
 
         tokenProvider = new BearerTokenProvider(() -> {
             try {
+				System.out.print("login:"+login);
+				System.out.print("password:"+password);
+				
                 return login(login, password);
             } catch (Exception e) {
                 e.printStackTrace(System.err);
@@ -86,7 +89,7 @@ public class ExternalRoutingApp {
 	        	
 	        	WorkAgent.createWorkAgent(tokenProvider, agentId, caseId, psrId);
 	        	
-			} catch (JSONException e1) {
+			} catch (Exception e1) {
 				e1.printStackTrace();
 			}   
        	
@@ -119,7 +122,7 @@ public class ExternalRoutingApp {
 								User.getUserDetails(tokenProvider, userId)
 								);
 				}     					
-			} catch (JSONException e) {
+			} catch (Exception e) {
 				e.printStackTrace(System.err);
 				System.exit(2);
 			}
