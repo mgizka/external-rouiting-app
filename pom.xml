@@ -4,12 +4,6 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <repositories>
-    <repository>
-        <id>local-maven-repository</id>
-        <url>file:///${project.basedir}/maven-repository</url>
-    </repository>
-</repositories>
 
   <groupId>com.orange.dop</groupId>
   <artifactId>external-routing-app</artifactId>
