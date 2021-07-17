@@ -131,7 +131,6 @@
               </execution>            
           </executions>
       </plugin>
-      </plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jar-plugin</artifactId>
@@ -139,11 +138,33 @@
         <configuration>
           <archive>
             <manifest>
+            <addClasspath>true</addClasspath>
             <mainClass>com.orange.dop.poc.servicechannel.externalrouting.ExternalRoutingApp</mainClass>
+            <classpathPrefix>dependency-jars/</classpathPrefix>
             </manifest>
           </archive>
         </configuration>
         </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-dependency-plugin</artifactId>
+          <version>2.5.1</version>
+          <executions>
+            <execution>
+              <id>copy-dependencies</id>
+              <phase>package</phase>
+              <goals>
+                  <goal>copy-dependencies</goal>
+              </goals>
+              <configuration>
+                  <outputDirectory>
+                                ${project.build.directory}/dependency-jars/
+                          </outputDirectory>
+              </configuration>
+              </execution>
+          </executions>
+        </plugin>
+      </plugins>
     </pluginManagement>
   </build>
 </project>
