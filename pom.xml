@@ -140,30 +140,26 @@
             <manifest>
             <addClasspath>true</addClasspath>
             <mainClass>com.orange.dop.poc.servicechannel.externalrouting.ExternalRoutingApp</mainClass>
-            <classpathPrefix>dependency-jars/</classpathPrefix>
+            <classpathPrefix>dependency/</classpathPrefix>
             </manifest>
           </archive>
         </configuration>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-dependency-plugin</artifactId>
-          <version>2.5.1</version>
-          <executions>
-            <execution>
-              <id>copy-dependencies</id>
-              <phase>package</phase>
-              <goals>
-                  <goal>copy-dependencies</goal>
-              </goals>
-              <configuration>
-                  <outputDirectory>
-                                target/dependency-jars/
-                          </outputDirectory>
-              </configuration>
-              </execution>
-          </executions>
-        </plugin>
+      </plugin>
+      
+              <plugin>
+                  <groupId>org.apache.maven.plugins</groupId>
+                  <artifactId>maven-dependency-plugin</artifactId>
+                  <version>2.4</version>
+                  <executions>
+                      <execution>
+                          <id>copy-dependencies</id>
+                          <phase>package</phase>
+                          <goals><goal>copy-dependencies</goal></goals>
+                      </execution>
+                  </executions>
+              </plugin>
+       
+      </build>
       </plugins>
     </pluginManagement>
   </build>
