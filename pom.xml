@@ -158,7 +158,7 @@
               </goals>
               <configuration>
                   <outputDirectory>
-                                ${project.build.directory}/dependency-jars/
+                                target/dependency-jars/
                           </outputDirectory>
               </configuration>
               </execution>
